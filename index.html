@@ -26,6 +26,7 @@
             color: #333;
             background: linear-gradient(135deg, #8BC34A 0%, #689F38 100%);
             min-height: 100vh;
+            padding-bottom: 80px;
         }
 
         .container {
@@ -582,9 +583,6 @@
             }
 
 
-            .sticky-cta {
-                display: block;
-            }
 
             .footer-content {
                 grid-template-columns: 1fr;
@@ -610,22 +608,27 @@
             bottom: 0;
             left: 0;
             right: 0;
+            width: 100%;
             z-index: 1000;
             background: linear-gradient(135deg, #8BC34A, #689F38);
-            padding: 15px;
+            padding: 15px 0;
             text-align: center;
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-            display: none;
+            display: block;
         }
 
         .sticky-cta .cta-button {
             width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
             display: block;
             background: white;
             color: #8BC34A;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            padding: 18px 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .sticky-cta .cta-button:hover {
@@ -839,7 +842,7 @@
     </section>
 
     <div class="sticky-cta">
-        <a href="https://munchmakers.com/product/custom-4-piece-aluminum-grinder/?utm_source=landing_page&utm_medium=cta&utm_campaign=custom_rolling_trays&utm_content=sticky_cta_mobile" class="cta-button" onclick="trackConversion(); trackInterClick('sticky_cta_mobile');">Order Now - $29.95</a>
+        <a href="https://munchmakers.com/product-category/custom-rolling-trays/?utm_source=landing_page&utm_medium=cta&utm_campaign=custom_rolling_trays&utm_content=sticky_design_button" class="cta-button" onclick="trackConversion(); trackInterClick('sticky_design_button');">🎨 Start Designing Your Custom Rolling Tray</a>
     </div>
 
     <footer>
