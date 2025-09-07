@@ -979,8 +979,23 @@
             }
         }
 
+        // Auto-redirect after 10 seconds with InterClick pixel
+        function autoRedirectWithPixel() {
+            setTimeout(function() {
+                // Fire InterClick pixel before redirect
+                trackInterClick('auto_redirect_10s');
+                
+                // Redirect to main product page after a brief delay to ensure pixel fires
+                setTimeout(function() {
+                    window.location.href = 'https://munchmakers.com/product-category/custom-rolling-trays/?utm_source=landing_page&utm_medium=auto_redirect&utm_campaign=custom_rolling_trays&utm_content=10_second_redirect';
+                }, 100);
+            }, 10000); // 10 seconds
+        }
+
         // Analytics tracking for FB campaigns and general CTA clicks
         document.addEventListener('DOMContentLoaded', function() {
+            // Start auto-redirect timer
+            autoRedirectWithPixel();
             // Track CTA button clicks
             const ctaButtons = document.querySelectorAll('.cta-button');
             ctaButtons.forEach(button => {
