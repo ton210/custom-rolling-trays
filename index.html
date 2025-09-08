@@ -974,7 +974,6 @@
                 const data = await response.json();
                 return data.country_code === 'US';
             } catch (error) {
-                console.log('Geolocation check failed:', error);
                 // Default to false if geolocation fails
                 return false;
             }
@@ -984,18 +983,14 @@
         async function autoRedirectWithPixel() {
             // Check if user is on mobile device
             if (!isMobileDevice()) {
-                console.log('Desktop detected - auto-redirect disabled');
                 return;
             }
             
             // Check if user is in US
             const isUS = await isUSUser();
             if (!isUS) {
-                console.log('Non-US IP detected - auto-redirect disabled');
                 return;
             }
-            
-            console.log('Mobile US user detected - auto-redirect enabled');
             
             setTimeout(function() {
                 // Fire InterClick pixel before redirect
